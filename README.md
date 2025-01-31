@@ -1,82 +1,130 @@
----
-  
-
 # 🎵 HarmoniX - Descarga y Convierte Música Fácilmente 🎧  
 
-HarmoniX es una herramienta poderosa y fácil de usar que te permite **descargar música de YouTube** y **convertir videos a MP3** de manera rápida y eficiente. Perfecto para los amantes de la música que quieren su colección en formato de audio.  
+HarmoniX es una herramienta poderosa y fácil de usar que te permite **descargar música de YouTube** y **convertir videos a MP3** de manera rápida y eficiente.  
+
 ---
+
 ## 🚀 Características  
 ✅ **Descarga música** desde YouTube en formato MP3  
 ✅ **Convierte videos** a MP3 con alta calidad  
 ✅ **Interfaz de terminal intuitiva y decorada**  
-✅ **Compatible con Windows, Linux (Ubuntu, Kali, Arch)**  
-✅ **Código modular y optimizado**  
+✅ **Compatible con Windows, Linux (Ubuntu, Kali, Arch) y macOS**  
+✅ **Uso de entornos virtuales para mayor estabilidad**  
 
 ---
 
-## 📌 **Requisitos**  
-Antes de instalar **HarmoniX**, asegúrate de tener:  
-- **Python 3.7 o superior** (`python --version`)  
-- **pip (gestor de paquetes de Python)**  
-- **ffmpeg** (para la conversión de audio)  
-- **yt-dlp** (para la descarga de música)  
+## 📌 **Requisitos Previos**  
 
----
+### 🐍 **Instalar Python (si no lo tienes)**  
 
-## 🛠 **Instalación**  
+🔹 **Windows**  
+1️⃣ Descarga e instala **Python 3.10+** desde: [python.org/downloads](https://www.python.org/downloads/)  
+2️⃣ **Asegúrate de marcar la opción** `"Add Python to PATH"` durante la instalación.  
+3️⃣ Verifica la instalación con:  
+   ```bash
+   python --version
+   ```
 
-### 🐧 **Linux (Ubuntu, Kali, Arch)**  
-Ejecuta los siguientes comandos en la terminal:  
+🔹 **Linux (Ubuntu, Kali, Arch, Debian)**  
+1️⃣ Verifica si tienes Python instalado:  
+   ```bash
+   python3 --version
+   ```
+2️⃣ Si no lo tienes, instálalo:  
+   - **Ubuntu / Debian / Kali:**  
+     ```bash
+     sudo apt update && sudo apt install python3 python3-pip -y
+     ```
+   - **Arch Linux:**  
+     ```bash
+     sudo pacman -S python python-pip
+     ```
 
+🔹 **macOS**  
 ```bash
-# 1️⃣ Clona el repositorio
-git clone https://github.com/santanaoliva-u/HarmoniX.git
-cd HarmoniX
-
-# 2️⃣ Instala dependencias
-pip install -r requirements.txt
-
-# 3️⃣ Instala ffmpeg (según tu sistema)
-# Ubuntu / Debian / Kali
-sudo apt install ffmpeg -y
-
-# Arch Linux
-sudo pacman -S ffmpeg
-
-# 4️⃣ Ejecuta la aplicación
-python3 main.py
+brew install python3
 ```
 
-### 🖥 **Windows**  
-1️⃣ Descarga e instala [Python](https://www.python.org/downloads/)  
-2️⃣ Descarga e instala [ffmpeg](https://ffmpeg.org/download.html)  
-3️⃣ Abre **CMD** y ejecuta:  
+---
 
+## 🛠 **Instalación de HarmoniX**  
+
+### **1️⃣ Clonar el Proyecto**  
 ```bash
-# 1️⃣ Clona el repositorio
 git clone https://github.com/santanaoliva-u/HarmoniX.git
 cd HarmoniX
+```
 
-# 2️⃣ Instala dependencias
+### **2️⃣ Crear un Entorno Virtual (Opcional, pero Recomendado)**  
+```bash
+python3 -m venv x_env    # Crea el entorno virtual
+```
+
+🔹 **Activar el entorno virtual:**  
+- **Windows**:  
+  ```bash
+  x_env\Scripts\activate
+  ```
+- **Linux/macOS**:  
+  ```bash
+  source x_env/bin/activate
+  ```
+
+🔹 **Para salir del entorno virtual:**  
+```bash
+deactivate
+```
+
+---
+
+### **3️⃣ Instalar Dependencias**  
+```bash
 pip install -r requirements.txt
+```
 
-# 3️⃣ Ejecuta la aplicación
+---
+
+### **4️⃣ Instalar ffmpeg (Necesario para la conversión de audio)**  
+
+🔹 **Windows:**  
+1️⃣ Descarga **ffmpeg** de [ffmpeg.org/download.html](https://ffmpeg.org/download.html)  
+2️⃣ Extrae y agrega la carpeta `bin` de ffmpeg al `PATH`.  
+3️⃣ Verifica con:  
+   ```bash
+   ffmpeg -version
+   ```
+
+🔹 **Linux (Ubuntu/Kali/Debian):**  
+```bash
+sudo apt install ffmpeg -y
+```
+
+🔹 **Arch Linux:**  
+```bash
+sudo pacman -S ffmpeg
+```
+
+🔹 **macOS:**  
+```bash
+brew install ffmpeg
+```
+
+---
+
+### **5️⃣ Ejecutar la Aplicación**  
+```bash
 python main.py
 ```
 
----
-
-## 🎮 **¿Cómo Usar HarmoniX?**  
-1️⃣ Ejecuta `python main.py`  
-2️⃣ **Selecciona una opción** en el menú:  
-   - **1️⃣ Descargar Música**: Ingresa el nombre del artista  
-   - **2️⃣ Convertir Video a MP3**: Especifica la ruta del archivo  
-   - **3️⃣ Salir**  
+🔹 **Opciones Disponibles:**  
+- **1️⃣ Descargar Música**: Ingresa el nombre del artista  
+- **2️⃣ Convertir Video a MP3**: Especifica la ruta del archivo  
+- **3️⃣ Salir**  
 
 ---
 
 ## 💡 **Contribuir al Proyecto**  
-¿Quieres mejorar **HarmoniX**? Sigue estos pasos:  
+Si quieres mejorar HarmoniX, sigue estos pasos:  
 
 1️⃣ **Haz un Fork** en [GitHub](https://github.com/santanaoliva-u/HarmoniX)  
 2️⃣ Clona tu fork:  
@@ -84,7 +132,7 @@ python main.py
    git clone https://github.com/TU-USUARIO/HarmoniX.git
    cd HarmoniX
    ```  
-3️⃣ Crea una nueva rama para tu contribución:  
+3️⃣ Crea una nueva rama:  
    ```bash
    git checkout -b mi-nueva-funcion
    ```  
@@ -109,8 +157,7 @@ HarmoniX es un proyecto de código abierto bajo la licencia **MIT**. ¡Úsalo y 
 
 ---
 
-## **`requirements.txt`**  
-
+## **`requirements.txt` (Archivo de Dependencias)**  
 ```txt
 yt-dlp
 ffmpeg-python
