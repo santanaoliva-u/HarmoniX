@@ -1,13 +1,10 @@
 ---
 ## **README.md Mejorado**  
 
-```md
 # 🎵 HarmoniX - Descarga y Convierte Música Fácilmente 🎧  
 
 HarmoniX es una herramienta poderosa y fácil de usar que te permite **descargar música de YouTube** y **convertir videos a MP3** de manera rápida y eficiente. Perfecto para los amantes de la música que quieren su colección en formato de audio.  
-
 ---
-
 ## 🚀 Características  
 ✅ **Descarga música** desde YouTube en formato MP3  
 ✅ **Convierte videos** a MP3 con alta calidad  
