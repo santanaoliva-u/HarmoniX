@@ -123,6 +123,41 @@ python main.py
 
 ---
 
+## 📦 **Generar Automáticamente el `requirements.txt`**  
+
+Si has instalado dependencias adicionales o necesitas regenerar `requirements.txt`, puedes hacerlo de dos maneras:  
+
+### 🔹 **Opción 1: Usando `pipreqs` (Recomendado)**  
+Este método escanea solo los archivos `.py` del proyecto y detecta los paquetes necesarios.  
+
+1️⃣ Instala `pipreqs`:  
+   ```bash
+   pip install pipreqs
+   ```  
+2️⃣ Genera el `requirements.txt`:  
+   ```bash
+   pipreqs /ruta/del/proyecto --force
+   ```  
+🔹 **Ejemplo**: Si tu código está en `~/HarmoniX`, ejecuta:  
+   ```bash
+   pipreqs ~/HarmoniX --force
+   ```
+
+---
+
+### 🔹 **Opción 2: Usando `pip freeze` (Incluye TODAS las dependencias del entorno virtual)**  
+Este método guarda todos los paquetes instalados en el entorno virtual, incluso los que no son necesarios para el proyecto.  
+
+```bash
+pip freeze > requirements.txt
+```
+
+📌 **Recomendación**: Usa `pipreqs` para obtener solo las dependencias del proyecto y no todo el entorno.  
+
+---
+
+
+
 ## 💡 **Contribuir al Proyecto**  
 Si quieres mejorar HarmoniX, sigue estos pasos:  
 
@@ -157,8 +192,8 @@ HarmoniX es un proyecto de código abierto bajo la licencia **MIT**. ¡Úsalo y 
 
 ---
 
-## **`requirements.txt` (Archivo de Dependencias)**  
-```txt
+## `requirements.txt` (Archivo de Dependencias)**  
+bash```
 yt-dlp
 ffmpeg-python
 colorama
